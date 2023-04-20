@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "rest_framework",
+    "wealth_api",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -77,7 +79,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "wealth_api",
-        "USER": "ROOT",
+        "USER": "admin",
         "PASSWORD": "P@ssw0rd",
         "HOST": "localhost",
         "PORT": "3306",
