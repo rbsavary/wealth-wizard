@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class WealthApiConfig(AppConfig):
+class ExpensesAppConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'wealth_api'
+    name = 'expenses_app'
