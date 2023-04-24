@@ -9,7 +9,7 @@ class expense(models.Model):
     date = models.DateTimeField(default=datetime.now, blank=True)
 
 
-class income(models.Model):
-    transaction = models.CharField(max_length=32)
-    amount = models.FloatField()
-    date = models.DateTimeField(default=datetime.now, blank=True)
+# class income(models.Model):
+#     transaction = models.CharField(max_length=32)
+#     amount = models.FloatField()
+#     date = models.DateTimeField(default=datetime.now, blank=True)

@@ -1,15 +1,15 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import WealthSerializer
-from .models import Wealth
+from .serializers import ExpenseSerializer
+from .models import Expense
 
 
 # Create your views here.
-class WealthList(generics.ListCreateAPIView):
-    queryset = Wealth.objects.all().order_by("id")
-    serializer_class = WealthSerializer
+class ExpenseList(generics.ListCreateAPIView):
+    queryset = Expense.objects.all().order_by("date")
+    serializer_class = ExpenseSerializer
 
 
-class WealthDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Wealth.objects.all().order_by("id")
-    serializer_class = WealthSerializer
+class ExpenseDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Expense.objects.all().order_by("date")
+    serializer_class = ExpenseSerializer

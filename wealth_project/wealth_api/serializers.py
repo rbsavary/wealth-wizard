@@ -8,7 +8,7 @@ class ExpenseSerializer(serializers.ModelSerializer):
         fields = ("id", "transaction", "amount", "date")
 
 
-class IncomeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Income
-        fields = ("id", "transaction", "amount", "date")
+# class IncomeSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Income
+#         fields = ("id", "transaction", "amount", "date")

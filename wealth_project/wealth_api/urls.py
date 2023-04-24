@@ -3,9 +3,9 @@ from . import views
 
 urlpatterns = [
     path(
-        "api/wealth", views.ContactList.as_view(), name="wealth_list"
-    ),  # api/contacts will be routed to the ContactList view for handling
+        "api/expenses", views.ExpenseList.as_view(), name="expense_list"
+    ),  # api/expenses will be routed to the ExpenseList view for handling
     path(
-        "api/contacts/<int:pk>", views.ContactDetail.as_view(), name="contact_detail"
-    ),  # api/contacts will be routed to the ContactDetail view for handling
+        "api/expenses/<int:pk>", views.ExpenseDetail.as_view(), name="expense_detail"
+    ),  # api/expenses will be routed to the ExpenseDetail view for handling
 ]
