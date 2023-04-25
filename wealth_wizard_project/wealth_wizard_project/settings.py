@@ -27,19 +27,26 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
+CORS_ALLOW_CREDENTIALS = True
 
 # Application definition
 
 INSTALLED_APPS = [
-    "corsheaders",
-    "rest_framework",
-    "expenses_app",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "corsheaders",
+    "rest_framework",
+    "user_app",
+    "expenses_app",
 ]
 
 MIDDLEWARE = [
@@ -85,7 +92,15 @@ DATABASES = {
         "PASSWORD": "P@ssw0rd",
         "HOST": "localhost",
         "PORT": "3306",
-    }
+    },
+    "users": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "users_api",
+        "USER": "admin",
+        "PASSWORD": "P@ssw0rd",
+        "HOST": "localhost",
+        "PORT": "3306",
+    },
 }
 
 
