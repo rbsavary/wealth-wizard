@@ -23,16 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-jxkq345q*6rzy2@tvte+plzw($7j&my-g94^5@r#me%8jq1)7b"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "*",
+]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 ]
 
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_CREDENTIALS = False
 
 # Application definition
 
@@ -45,7 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "corsheaders",
     "rest_framework",
-    "user_app",
+    "user_api",
     "expenses_app",
 ]
 
@@ -85,15 +87,15 @@ WSGI_APPLICATION = "wealth_wizard_project.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+    # "default": {
+    #     "ENGINE": "django.db.backends.mysql",
+    #     "NAME": "expenses_api",
+    #     "USER": "admin",
+    #     "PASSWORD": "P@ssw0rd",
+    #     "HOST": "localhost",
+    #     "PORT": "3306",
+    # },
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "expenses_api",
-        "USER": "admin",
-        "PASSWORD": "P@ssw0rd",
-        "HOST": "localhost",
-        "PORT": "3306",
-    },
-    "users": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "users_api",
         "USER": "admin",
@@ -103,6 +105,14 @@ DATABASES = {
     },
 }
 
+AUTH_USER_MODEL = "user_api.AppUser"
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+    ),
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
