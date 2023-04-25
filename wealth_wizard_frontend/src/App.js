@@ -29,10 +29,10 @@ const App = () => {
           <Table striped bordered hover variant="dark">
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Date</th>
+          <th>Transaction</th>
+          <th>Amount</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
