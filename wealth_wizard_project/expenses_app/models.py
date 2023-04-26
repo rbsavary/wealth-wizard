@@ -6,4 +6,4 @@ from django.utils import timezone
 class Expense(models.Model):
     date = models.DateField(("Date"), default=timezone.now)
     transaction = models.CharField(max_length=32)
-    amount = models.FloatField()
+    amount = models.IntegerField()
