@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Add = (props) => {
-    const emptyExpense = { transaction: '', datetime: '', amount: '' }
+    const emptyExpense = { transaction: '', date: '', amount: '' }
     const [expense, setExpense] = useState(emptyExpense)
 
     const handleChange = (event) => {
