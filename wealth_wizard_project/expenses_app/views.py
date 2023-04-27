@@ -6,10 +6,10 @@ from .models import Expense
 
 # Create your views here.
 class ExpenseList(generics.ListCreateAPIView):
-    queryset = Expense.objects.all().order_by("date")
+    queryset = Expense.objects.all().order_by("-date")
     serializer_class = ExpenseSerializer
 
 
 class ExpenseDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Expense.objects.all().order_by("date")
+    queryset = Expense.objects.all().order_by("-date")
     serializer_class = ExpenseSerializer
