@@ -5,7 +5,7 @@ import Add from './components/Add'
 import Edit from './components/Edit'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
-
+import Image from 'react-bootstrap/Image';
 
 const App = () => {
 
@@ -24,11 +24,18 @@ const getExpenses = () => {
 // POST route
 const handleCreate = (addExpense) => {
   console.log("Adding new expense:", addExpense)
+  try {
+
+ 
   axios.post('http://127.0.0.1:8000/api/expenses', addExpense)
     .then((response) => {
       console.log(response)
       getExpenses()  
-    })
+    }).catch((error) => { console.log(error)})
+  }
+  catch(error) {
+    console.log(error)
+  }
 }
 
 // DELETE route
@@ -66,15 +73,21 @@ useEffect(() => {
         <div>
           <h1 className='text-center mt-3'>Wealth Wizard</h1>
         </div>
+        
         <div>
           <h2 className='text-center mt-3'>Expense Tracker</h2> 
         </div>
-        
+        <div>
+          <Image id="eyes" src='https://i.imgur.com/Pg6RleT.jpeg' rounded></Image>
+        </div>
+        <div>
+          <h3 className="text-center">If you're not watching you money who is?</h3>
+        </div>
         <div>
           <Add handleCreate={handleCreate} />
         </div>
         <div>
-          <h3 className='text-center p-3'>Total Expenses: <span id='totalExpenses'>$$$ {calculateTotalExpense(expenses)}</span></h3>
+          <h3 className='text-center m-3'>Total Expenses: <span id='totalExpenses'>$$$ {calculateTotalExpense(expenses)}</span></h3>
         </div>
         <div>  
           <Table striped bordered hover variant="dark" size="sm">

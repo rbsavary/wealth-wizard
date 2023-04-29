@@ -6,3 +6,7 @@ body {
   color: red;
   text-decoration: underline
 }
+#eyes {
+  max-width: 100%;
+  height: auto;
+}

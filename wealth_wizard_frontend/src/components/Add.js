@@ -11,21 +11,10 @@ const Add = (props) => {
         event.preventDefault()
         props.handleCreate(expense)  
     }
-    // function ExpenseForm() {
-    //   const [amount, setAmount] = useState('')
     
-    //   const handleSubmit = (event) => {
-    //     event.preventDefault();
-    
-    //     if (Number(amount) < 0) {
-    //       alert('Amount cannot be negative.');
-    //       return;
-    //     }
-    //   }
-    // }    
     return (
         <>
-          <div className='pb-3'>
+          <div className=''>
             <h2 className='app-header'>Add Transaction</h2>
             <form onSubmit={handleSubmit}>
               <div className="row d-flex">
@@ -49,7 +38,7 @@ const Add = (props) => {
                     value={expense.amount} 
                     onChange={handleChange} />
                 </div>
-                <div className="ml-3">
+                <div className="mt-3">
                   <input
                     className="btn btn-primary"
                     type="submit"
