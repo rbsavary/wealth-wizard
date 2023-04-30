@@ -81,7 +81,7 @@ useEffect(() => {
           <Image id="eyes" src='https://i.imgur.com/Pg6RleT.jpeg' rounded></Image>
         </div>
         <div>
-          <h3 className="text-center">If you're not watching you money who is?</h3>
+          <h2 className="text-center">Watch Your Money!</h2>
         </div>
         <div>
           <Add handleCreate={handleCreate} />
@@ -101,9 +101,16 @@ useEffect(() => {
             </thead>
             <tbody>
             {expenses.map((expense) => {
+              // Create a new Date object from the date property of the expense object
+              const date = new Date(expense.date)
+
+              // Format the date as "MM/DD/YYYY" using the toLocaleDateString() method
+              const formattedDate = date.toLocaleDateString("en-US")
+      
+              // Render a table row with the formatted date, transaction, and amount
               return (
                 <tr key={expense.id}>
-                  <td>{expense.date}</td>
+                  <td>{formattedDate}</td>
                   <td>{expense.transaction}</td>
                   <td>${expense.amount}</td>
                   <td style={{ display: 'flex', alignItems: 'center' }}>
