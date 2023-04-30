@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 
 const Add = (props) => {
+    // Define the initial empty state for the expense object
     const emptyExpense = { transaction: '', amount: '' }
+    // Define the expense state and set its initial value to the empty state
     const [expense, setExpense] = useState(emptyExpense)
 
+    // Define a function to handle changes to the form inputs
     let handleChange = (event) => {
+        // Update the expense state by spreading the previous expense object and setting the new value for the input field being changed
         setExpense({ ...expense, [event.target.name]: event.target.value })
     }
+
+    // Define a function to handle form submission
     const handleSubmit = (event) => {
+        // Prevent the default form submission behavior
         event.preventDefault()
-        props.handleCreate(expense)  
+        // Call the handleCreate function passed down through props with the current expense state as an argument
+        props.handleCreate(expense)
+        // Set the expense state back to the empty state after the form is submitted
+        setExpense(emptyExpense)  
     }
     
     return (

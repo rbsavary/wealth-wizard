@@ -7,11 +7,13 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 
+// Define main App component
 const App = () => {
 
+// Define state for expenses array using useState hook
 let [expenses, setExpenses] = useState([])
 
-// GET route
+// GET request
 const getExpenses = () => {
   axios.get('http://127.0.0.1:8000/api/expenses')
     .then((response) => setExpenses(response.data),
@@ -21,24 +23,16 @@ const getExpenses = () => {
     .catch((error) => console.error(error))
 }
 
-// POST route
+// POST request
 const handleCreate = (addExpense) => {
-  console.log("Adding new expense:", addExpense)
-  try {
-
- 
   axios.post('http://127.0.0.1:8000/api/expenses', addExpense)
     .then((response) => {
       console.log(response)
       getExpenses()  
-    }).catch((error) => { console.log(error)})
-  }
-  catch(error) {
-    console.log(error)
-  }
+    })
 }
-
-// DELETE route
+  
+// DELETE request
 const handleDelete = (event) => {
   axios.delete('http://127.0.0.1:8000/api/expenses/' + event.target.value)
     .then((response) => {
@@ -47,7 +41,7 @@ const handleDelete = (event) => {
     })
 }
 
-// UPDATE route
+// UPDATE request
 const handleUpdate = (editExpense) => {
   console.log(editExpense)
   axios.put('http://127.0.0.1:8000/api/expenses/' + editExpense.id, editExpense)
@@ -61,8 +55,9 @@ const handleUpdate = (editExpense) => {
 const calculateTotalExpense = (expenses) => {
   const total = expenses.reduce((accumulator, expense) => accumulator + expense.amount, 0)
   return total
-}
+}  
 
+// Use useEffect hook to call getExpenses() function on initial load of component
 useEffect(() => {
   getExpenses()
 }, [])
