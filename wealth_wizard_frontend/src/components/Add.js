@@ -27,7 +27,7 @@ const Add = (props) => {
                     value={expense.transaction} 
                     onChange={handleChange} />
                 </div>
-                <div className="col-md-1">
+                <div className="col-md-1 mt-1">
                   <label className="form-label" htmlFor="amount">Amount $</label>
                   <input 
                     className="form-control" 
@@ -38,7 +38,7 @@ const Add = (props) => {
                     value={expense.amount} 
                     onChange={handleChange} />
                 </div>
-                <div className="mt-3">
+                <div className="mt-2">
                   <input
                     className="btn btn-primary"
                     type="submit"

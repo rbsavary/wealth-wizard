@@ -75,13 +75,13 @@ useEffect(() => {
         </div>
         
         <div>
-          <h2 className='text-center mt-3'>Expense Tracker</h2> 
+          <h2 className='text-center'>Expense Tracker</h2> 
         </div>
         <div>
           <Image id="eyes" src='https://i.imgur.com/Pg6RleT.jpeg' rounded></Image>
         </div>
         <div>
-          <h2 className="text-center">Watch Your Money!</h2>
+          <h2 className="text-center mt-3">Watch Your Money!</h2>
         </div>
         <div>
           <Add handleCreate={handleCreate} />
