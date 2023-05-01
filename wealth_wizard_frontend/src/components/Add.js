@@ -50,7 +50,7 @@ const Add = (props) => {
                 </div>
                 <div className="mt-2">
                   <input
-                    className="btn btn-primary"
+                    className="btn btn-light"
                     type="submit"
                     value="Submit" />
                 </div>

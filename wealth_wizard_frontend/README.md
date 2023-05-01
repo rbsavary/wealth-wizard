@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+Welcome to Wealth Wizard!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Wealth Wizard is an expense tracker app that helps you manage your finances. With this app, you can easily track your expenses, filter and sort them, and visualize your spending patterns in a chart.
 
-## Available Scripts
+Getting Started
+To use Wealth Wizard, you can either download the source code from the repository or visit the deployed version of the app. The source code is available on GitHub at https://github.com/rbsavary/wealth_wizard.
 
-In the project directory, you can run:
+If you want to run the app locally, you need to have Node.js installed on your machine. Then, follow these steps:
 
-### `npm start`
+Clone the repository to your local machine
+Navigate to the root directory of the app in your terminal
+Run npm install to install the dependencies
+Run npm start to start the app
+Features
+Wealth Wizard provides several features to help you manage your finances, including:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Adding new expenses: You can add new expenses to the app by entering the expense name, amount, and date.
+Filtering expenses: You can filter expenses by year, month, or day to get a detailed overview of your spending.
+Sorting expenses: You can sort expenses by date or amount to identify patterns and trends in your spending.
+Chart visualization: You can see your expenses represented in a pie chart for a quick overview of your spending by category.
+Technologies Used
+Wealth Wizard was built using React.js, MySQL, and Django. React.js is used for the frontend, MySQL for the database, and Django for the backend. The app also uses other open-source libraries such as React Router, Chart.js, and Moment.js.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Contributing
+We welcome contributions to the project! If you want to contribute to the codebase, please fork the repository and submit a pull request. If you find any bugs or issues with the app, feel free to report them on the Issues page of the repository.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+Wealth Wizard is released without any license. You can use the app for personal use, but any commercial use is strictly prohibited. Please be aware that using the app is at your own risk, and the creators of Wealth Wizard do not provide any warranty or support for the app.
